@@ -4,8 +4,26 @@
 
 <div class='row'>
   <!-- RENDER THE FORM PARTIAL HERE. -->
+  <!-- just used HTML form for now -->
+    <div class="col-md-6">
+    <form action="/comics/add">
+      <div class="form-group">
+        <label for="title">Comic Title:</label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Enter comic title">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" name="description" class="form-control" id="description" placeholder="Enter comic description">
+      </div>
+      <div class="form-group">
+        <label for="image">Cover Image:</label>
+        <input type="text" name="image" class="form-control" id="image" placeholder="Enter comic image url">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
 </div>
 
 <div class='container'>
-  <%= link_to 'Back to all comics', comics_path %>
+  <%= link_to 'Back to all comics', "/comics" %>
 </div>
