@@ -24,11 +24,11 @@ class ComicsController < ApplicationController
     end 
 
     def add
-    	c = Comic.new
-    	c.title = params["title"]
-    	c.description = params["description"]
-    	c.image = params["image"]
-    	c.save
+    	@comic = Comic.new
+    	@comic.title = params["title"]
+    	@comic.description = params["description"]
+    	@comic.image = params["image"]
+    	@comic.save
     	redirect_to "/comics"
     end
 
